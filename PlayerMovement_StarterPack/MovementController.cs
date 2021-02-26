@@ -4,20 +4,26 @@
 public class MovementController : MonoBehaviour
 {
     /*
-        This is a basic player movement script there the player movement is determined by using Physics & Maths.
+    This is a basic player movement script there the player movement is determined by using Physics & Maths.
+
+        To change the inputs please change them from the Project Setting > Input Manager.
+            -- Default Controls are WASD or Arrow keys.
     */
+    [Header("Movement Settings")]
     [SerializeField]
     private float _moveSpeed = 20f;
 
     [SerializeField]
     private float _acceleration = 5f;
 
+    [Header("Raycast Settings")]
     [SerializeField]
     private LayerMask _groundLayer;
 
     [SerializeField]
     private float _castOffset = 0.25f;
 
+    [Header("Physics Setting")]
     [SerializeField]
     private ForceMode _forceMode = ForceMode.Force;
 

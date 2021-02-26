@@ -3,12 +3,18 @@
 [RequireComponent(typeof(Rigidbody))]
 public class JumpController : MonoBehaviour
 {
+    [Header("Jump Inputs")]
+    [SerializeField]
+    private KeyCode _jumpKey = KeyCode.Space;
+
     [SerializeField]
     private float _jumpSpeed = 12f;
 
+    [Header("Physics Setting")]
     [SerializeField]
     private ForceMode _forceMode = ForceMode.VelocityChange;
 
+    [Header("Ground Checking Settings")]
     [SerializeField]
     private float _groundCheckDistance = 0.1f;
 
@@ -28,7 +34,7 @@ public class JumpController : MonoBehaviour
 
     private void Update()
     {
-        _jumpPressed |= Input.GetKeyDown(KeyCode.Space);
+        _jumpPressed |= Input.GetKeyDown(_jumpKey);
     }
     private void FixedUpdate()
     {
