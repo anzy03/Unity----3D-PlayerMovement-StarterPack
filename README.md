@@ -9,5 +9,5 @@ The purpose of this is project is to help people get a quick start on prototypin
 ## Setup
 - Clone the project or Download the Unity Package from the Releases.
 - Add the scripts or Package in the project.
-- Drag the Scripts and attack them to your `GameObject`
+- Drag the Scripts and attach them to your `GameObject`
 
